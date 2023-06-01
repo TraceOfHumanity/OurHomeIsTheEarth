@@ -23,7 +23,7 @@ const scene = new THREE.Scene();
 // const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 const geometry = new THREE.SphereGeometry(0.5, 64, 64);
 const geometry2 = new THREE.SphereGeometry(1.5, 70, 70);
-const moonGeometry = new THREE.SphereGeometry(0.02, 32, 32);
+const moonGeometry = new THREE.SphereGeometry(0.04, 32, 32);
 
 // Materials
 
