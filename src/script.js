@@ -28,12 +28,10 @@ const moonGeometry = new THREE.SphereGeometry(0.02, 32, 32);
 // Materials
 
 const material1 = new THREE.MeshStandardMaterial();
-// material1.metalness = 1;
-// material1.roughness = 0;
 material1.normalMap = normalTexture;
 material1.lightMapIntensity = 1;
 material1.map = texture;
-// material.color = new THREE.Color(0x00ffff);
+
 const material2 = new THREE.MeshStandardMaterial();
 material2.map = space;
 material1.roughness = 1;
@@ -46,6 +44,7 @@ material2.castShadow = false;
 const moonMaterial = new THREE.MeshStandardMaterial();
 moonMaterial.map = moonMap;
 moonMaterial.roughness = 1;
+
 // Mesh
 const sphere = new THREE.Mesh(geometry, material1);
 const sphere2 = new THREE.Mesh(geometry2, material2);
@@ -54,11 +53,6 @@ moon.position.set(0, 0, 0); // Налаштуйте позицію місяця
 scene.add(sphere, sphere2, moon);
 
 // Lights
-// //create two spotlights to illuminate the scene
-// var spotLight = new THREE.SpotLight(0xffffff);
-// spotLight.position.set(-20, 1, 7);
-// spotLight.intensity = 0.6;
-// scene.add(spotLight);
 
 const pointLight2 = new THREE.PointLight(0xffffff, 2);
 pointLight2.position.set(-1, 1, 1);
