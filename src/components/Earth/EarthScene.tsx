@@ -99,7 +99,8 @@ export const EarthScene = (props: any) => {
         float dotProduct = dot(vNormal, lightDir);
         vec4 dayColor = texture2D(dayTexture, vUv);
         vec4 nightColor = texture2D(nightTexture, vUv);
-        gl_FragColor = mix(nightColor, dayColor, max(dotProduct, 0.0));
+        float transition = smoothstep(-0.2, 0.99, dotProduct);
+        gl_FragColor = mix(nightColor, dayColor, transition);
       }
     `,
   });
