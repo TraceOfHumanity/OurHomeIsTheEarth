@@ -146,12 +146,9 @@ export const EarthScene = (props: any) => {
         <meshPhongMaterial map={moonMap} />
         <pointLight intensity={0.01} />
       </mesh>
-      <mesh position={[0, -5, -20]} ref={sunRef} rotation={[0, 0, 0]}>
-        {/* <sphereGeometry args={[0.10, 32, 32]} /> */}
-        {/* <meshPhongMaterial emissive="#fcfc5f" /> */}
-        {/* <meshPhongMaterial map={haloMap} /> */}
+      <mesh position={[0, -20, -20]} ref={sunRef} rotation={[0, 0, 0]}>
         <pointLight intensity={2000} />
-        <sprite ref={haloRef} position={[0, 0, 0]}>
+        <sprite ref={haloRef} position={[0, 0, 0]} scale={[0.6, 0.6, 0.6]}>
           <spriteMaterial map={haloMap} />
         </sprite>
       </mesh>
