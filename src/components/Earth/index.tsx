@@ -8,6 +8,7 @@ export const Earth = () => {
   return (
     <div className="fixed left-0 top-0 h-screen w-screen">
       <Canvas>
+        
         <ambientLight intensity={0.1} />
         <EarthScene />
       </Canvas>
