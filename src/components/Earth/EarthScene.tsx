@@ -51,7 +51,7 @@ export const EarthScene = (props: any) => {
     const [vec] = React.useState(() => new THREE.Vector3());
     return useFrame((state) => {
       state.camera.position.lerp(
-        vec.set(state.mouse.x * 0.2, state.mouse.y * 0.1, 4),
+        vec.set(state.mouse.x * 0.2, state.mouse.y * 0.1, 3.5),
         0.05,
       );
       state.camera.lookAt(0, 0, 0);
@@ -122,7 +122,7 @@ export const EarthScene = (props: any) => {
         factor={starsFactor}
         fade={false}
         ref={starsRef}
-        speed={0}
+        speed={0.02}
       />
       <mesh ref={cloudsRef} position={[0, 0, 0]}>
         <sphereGeometry args={[1.006, 32, 32]} />
